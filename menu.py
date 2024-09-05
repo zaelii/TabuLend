@@ -1,3 +1,4 @@
+
 def modoCliente(clienteFacade):
     while True:
         print("\nModo Cliente")
@@ -46,3 +47,22 @@ def modoAdmin(adminFacade):
             break
         else:
             print("Opção inválida. Tente novamente.")
+ 
+def menu():
+    while True:
+        print("\nSistema de Aluguel de Jogos de Tabuleiro")
+        print("1. Entrar como Cliente")
+        print("2. Entrar como Administrador")
+        print("3. Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == '1':
+            modoCliente(clienteFacade)
+        elif opcao == '2':
+            modoAdmin(adminFacade)
+        elif opcao == '3':
+            print("Saindo...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+            
