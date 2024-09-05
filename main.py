@@ -1,5 +1,5 @@
 import random
-
+#cheguei
 # Classe representando um jogo de tabuleiro
 class JogoDeTabuleiro:
     def __init__(self, titulo):
