@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Aluguel de Livros</title>
+    <title>Catálogo de Aluguel de Jogos</title>
     <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
@@ -22,6 +22,23 @@
         <h1>Bem-vindo ao TabuLend</h1>
         <p>Descubra seu próximo jogo de tabuleiro!</p>
         <input type="text" placeholder="Pesquise por título">
+    </section>
+
+    <!-- Catálogo de Jogos -->
+    <section id="catalogo" class="catalogo">
+        <h2>Nosso Acervo de Jogos</h2>
+        <div class="jogos-grid">
+            {% for jogo in jogos %}
+            <div class="jogo-card">
+                <img src="{{ jogo.imagem }}" alt="Capa do {{ jogo.nome }}">
+                <h3>{{ jogo.nome }}</h3>
+                <p>Editora: {{ jogo.editora }}</p>
+                <p>Preço: {{ jogo.preco }}</p>
+                <p>Dias de Aluguel: {{ jogo.dias_aluguel }}</p>
+                <button>Alugar</button>
+            </div>
+            {% endfor %}
+        </div>
     </section>
 
     <footer>

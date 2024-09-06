@@ -1,5 +1,5 @@
 # main.py
-from menu import * 
+from menu import menu
 
 
 if __name__ == "__main__":
