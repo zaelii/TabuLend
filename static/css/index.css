@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #FDC603;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.bem_vindo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.bem_vindo {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 400px;
+    text-align: center;
+    color: #3A2782;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bem_vindo input {
+    padding: 15px;
+    width: 50%;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bem_vindo input {
+    padding: 15px;
+    width: 50%;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.bem_vindo input:focus {
+    border-color: #E43516;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
+}
+
