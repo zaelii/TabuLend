@@ -7,5 +7,10 @@ body{
 div#form_fundo{
     background-color: brown;
     margin: 10% 25% 25% 25%;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 2px;
+    box-shadow: 2px 5px 5px black;
 
 }
