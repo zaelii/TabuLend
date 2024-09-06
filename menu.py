@@ -1,3 +1,9 @@
+from facades import *
+
+def main():
+    clienteFacade = FacadeCliente()
+    adminFacade = FacadeAdmin()
+    menu(True)
 
 def modoCliente(clienteFacade):
     while True:
@@ -57,12 +63,17 @@ def menu():
         opcao = input("Escolha uma opção: ")
 
         if opcao == '1':
+            clienteFacade = FacadeCliente()
             modoCliente(clienteFacade)
+
         elif opcao == '2':
+            clienteFacade = FacadeCliente()
             modoAdmin(adminFacade)
+            
         elif opcao == '3':
             print("Saindo...")
             break
         else:
             print("Opção inválida. Tente novamente.")
-            
+
+

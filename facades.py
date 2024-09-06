@@ -23,3 +23,11 @@ class FacadeAdmin:
 
     def recusarSolicitacao(self, codigoSolicitacao):
         SistemaAluguel.getInstance().recusarSolicitacao(codigoSolicitacao)
+
+
+
+
+
+
+
+
