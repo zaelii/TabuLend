@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body{
+    background-color: aqua;
+}
+
+div#form_fundo{
+    background-color: brown;
+    margin: 10% 25% 25% 25%;
+
+}
