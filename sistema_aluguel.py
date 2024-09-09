@@ -4,17 +4,25 @@ from jogo import JogoDeTabuleiro
 from solicitacao import SolicitacaoAluguel
 
 class SistemaAluguel:
-    _instance = None
+    _instance = None  # Variável de classe que armazenará a única instância
 
     @staticmethod
     def getInstance():
+        """Método estático responsável por retornar a única instância da classe.
+        Se a instância ainda não existir, ele cria uma nova instância.
+        Se já existir, retorna a instância existente.
+        """
         if SistemaAluguel._instance is None:
-            SistemaAluguel()
+            SistemaAluguel._instance = SistemaAluguel()
         return SistemaAluguel._instance
 
     def __init__(self):
+        """Construtor da classe.
+        Garante que, se tentar criar uma nova instância diretamente, o sistema
+        lançará uma exceção, assegurando que o Singleton é respeitado.
+        """
         if SistemaAluguel._instance is not None:
-            raise Exception("Esta classe é um singleton!")
+            raise Exception("Esta classe é um singleton! Use getInstance() para obter a instância.")
         else:
             SistemaAluguel._instance = self
             self.jogos = []                # Lista que armazena todos os jogos disponíveis

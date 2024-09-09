@@ -67,7 +67,7 @@ def menu():
             modoCliente(clienteFacade)
 
         elif opcao == '2':
-            clienteFacade = FacadeCliente()
+            adminFacade = FacadeAdmin()
             modoAdmin(adminFacade)
             
         elif opcao == '3':
