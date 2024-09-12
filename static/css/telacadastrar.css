@@ -1,13 +1,17 @@
+
 body {
     margin: 0;
     background-color: #FFE59A;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.LogoLogin{
+    position: absolute;
+    top: 15%; 
+    left: center; 
+    width: 30%; 
+    height: auto; 
 
-.LogoLogin{     /* logo do login */
-    width: 300px;
-    height: auto;
 }

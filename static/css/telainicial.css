@@ -1,0 +1,60 @@
+
+
+body {
+    margin: 0;
+    background-color: #FFE59A;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogoLogin{
+    position: absolute;
+    top: 15%; 
+    left: center; 
+    width: 30%; 
+    height: auto; 
+}
+
+.botãoEntrar{
+    position: absolute;
+    top: 54%; 
+    left: center; 
+    background-color: #FB5A48;
+    color: #fff;
+    border: none;
+    border-radius: 3%;
+    padding: 1% 2%;
+    font-size: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+.botãoCadastrar{
+    display: block;
+    position: absolute;
+    top: 64%; 
+    left: center; 
+    background-color: #FB5A48;
+    color: #fff;
+    border: none;
+    border-radius: 3%;
+    padding: 1% 2%;
+    font-size: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+
+.botãoEntrar:hover{
+    background-color: #7f2e1a;
+    transform: scale(1.05);
+}
+
+.botãoCadastrar:hover{
+    background-color: #7f2e1a;
+    transform: scale(1.05);
+}
+

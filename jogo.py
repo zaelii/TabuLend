@@ -7,14 +7,14 @@ class JogoDeTabuleiro:
         self.alugado = False  # Status de aluguel: True se alugado, False caso contrário (inicia-se disponível)
         self.observadores = []  # Lista onde ficarão usuários que querem receber notificação da alteração do jogo
 
-    def AddObsrvadores(self, observador):  # Adicionar um observador na lista
+    def AddObsrvadores(self, observador):  # Adiciona um observador na lista
         self.observadores.append(observador)
         print(f'Observador {observador.nome} adicionado ao jogo {self.titulo}')
 
-    def RemoverObsrvadores(self, observador):  # Remover um observador na lista
+    def RemoverObsrvadores(self, observador):  # Remove um observador da lista
         self.observadores.remove(observador)
 
-    def NotificarObservadores(self):  # Notifica todos na lista sobre a mudança de estado do jogo
+    def NotificarObservadores(self):  # Notifica todos da lista sobre a disponibilidade do jogo
         for observador in self.observadores:
             observador.atualizar(self)
         print(f"Observadores notificados sobre o jogo {self.titulo}")
