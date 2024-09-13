@@ -11,9 +11,9 @@ body {
 
 .LogoLogin{
     position: absolute;
-    top: 15%; 
-    left: center; 
-    width: 30%; 
+    left: 32%; 
+    width: 30%;
+    margin-top: -3%;
     height: auto; 
 
 }
@@ -21,7 +21,9 @@ body {
 .botãoEntrar{
     font-family: 'Alata';
     position: absolute;
-    top: 54%; 
+    top: 54%;
+    margin-top: 4%;
+    margin-left: -15%;
     left: center; 
     background-color: #FB5A48;
     color: #fff;
@@ -40,4 +42,14 @@ body {
 }
 
 
-
+.BarraLoginTXT, .BarraLoginPASS{
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: transform 0.3s; 
+    transform-origin: center; 
+    }
