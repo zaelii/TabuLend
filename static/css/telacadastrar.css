@@ -7,11 +7,58 @@ body {
     align-items: center;
     justify-content: center;
 }
-.LogoLogin{
-    position: absolute;
-    top: 15%; 
-    left: center; 
-    width: 30%; 
-    height: auto; 
 
+.LogoLogin{
+    width: 200px;
+}
+
+
+.BarraLoginNOME, .BarraLoginEMAIL, .BarraLoginUSER, .BarraLoginPASS{
+    width: 20%;
+    padding: 11px;
+    margin-bottom: -2px; 
+    border: 0px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: transform 0.3s; 
+    transform-origin: center; 
+    }
+
+
+
+.textNOME,.textoEMAIL,.textoUSUARIO,.textoPASS{
+    font-family:'Alata';
+    text-align: center; 
+    background-color:  #FB5A48;
+    text-align: center; 
+    color:#ffffff;
+    border: 5px solid #FB5A48;
+    border-radius: 5px;
+}
+
+.textoPASS,.textNOME{
+    width: 4%;
+}
+
+.textoEMAIL{
+    width: 5%;
+
+}.textoUSUARIO{
+    width: 6%;
+}
+
+.BotãoCadastrar{
+    font-family:'Alata';
+    background-color:  #FB5A48;
+    color:#ffffff;
+    text-align: center; 
+    border: 5px solid #FB5A48;
+    border-radius: 5px;
+}
+
+.telacadastro{
+    position: center;
+    width: 100%;
+    margin: center;
+    height: 70%;
 }

@@ -31,5 +31,10 @@ def voltartelainicial():
     return render_template('telalogin.html')
 
 
+@app.route('/telacadastrar.html')
+def telacadastrar():
+    return render_template('telacadastrar.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

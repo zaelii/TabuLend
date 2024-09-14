@@ -28,13 +28,13 @@ body {
     font-family: 'Alata';
 }
 
-.botãoEntrar:hover,.textoUSUARIO,.textoSENHA  {
+.botãoEntrar:hover, {
     background-color: #7f2e1a;
     transform: scale(1.05);
 }
 
 
-.BarraLoginTXT, .BarraLoginPASS{
+.BarraLoginUSER, .BarraLoginPASS{
     width: 100%;
     padding: 11px;
     margin-bottom: 1px; 
@@ -54,6 +54,7 @@ body {
     border: 5px solid #FB5A48;
     border-radius: 5px;
 }
+
 .textoSENHA{
     width: 28%;
 }

@@ -19,7 +19,29 @@
 
 <body>
 
-    <img src="/static/imagens/LOGO.png" alt="logo" Class="LogoLogin">
+<div class="telacadastro">
+
+    <form action="/register" method="post">
+
+        <img src="/static/imagens/LOGO.png" alt="logo" Class="LogoLogin">
+
+        <p class="textNOME"> NOME </p>
+        <input class="BarraLoginNOME" type="text"  name="name" required>
+
+        <P class="textoEMAIL"> E-MAIL </P>
+        <input class="BarraLoginEMAIL" type="email" name="email" required>
+    
+        <P class="textoUSUARIO"> USUÁRIO </P>
+        <input class="BarraLoginUSER" type="text" name="username" required>
+
+        <p class="textoPASS"> SENHA </p>
+        <input class="BarraLoginPASS" type="password" name="password" required>
+        
+        <button class="BotãoCadastrar" type="submit"> CADASTRAR </button>
+
+    </form>
+
+</div>
 
     
     <footer>
