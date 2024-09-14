@@ -1,5 +1,4 @@
 
-
 body {
     margin: 0;
     background-color: #FFE59A;
@@ -9,23 +8,15 @@ body {
     justify-content: center;
 }
 
-
 .LogoLogin{
-    width: 250px;
-    height: auto; 
-    position: absolute;
-    left: 39%; 
-    margin-top: -18%;
-
+    width: 200px;
 }
 
 .botãoEntrar{
     font-family: 'Alata';
     position: absolute;
-    top: 54%;
-    margin-top: 4%;
-    margin-left: -15%;
-    left: center; 
+    top: 75%;
+    left: 46.56%; 
     background-color: #FB5A48;
     color: #fff;
     border: none;
@@ -37,21 +28,58 @@ body {
     font-family: 'Alata';
 }
 
-.botãoEntrar:hover{
+.botãoEntrar:hover,.textoUSUARIO,.textoSENHA  {
     background-color: #7f2e1a;
     transform: scale(1.05);
 }
 
 
 .BarraLoginTXT, .BarraLoginPASS{
-    width: 80%;
-    max-width: 500px;
-    padding: 10px;
-    margin-bottom: 20px; /* Espaçamento entre os campos */
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 1px; 
     border: 0px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     box-sizing: border-box;
     transition: transform 0.3s; 
     transform-origin: center; 
     }
 
+.textoUSUARIO,.textoSENHA {
+    width: 40%;
+    text-align: center; 
+    font-family:'Alata';
+    background-color:  #FB5A48;
+    color:#ffffff;
+    border: 5px solid #FB5A48;
+    border-radius: 5px;
+}
+.textoSENHA{
+    width: 28%;
+}
+
+
+.RecuperarSenha{
+    font-family: 'Alata';
+    text-decoration: underline; 
+    color:#7F2E1A;
+    border-bottom: 40%;
+    margin-left: 20%;
+    padding: 20% 0% 0% 0%;
+}
+
+.Voltar{   
+    font-family: 'Alata';
+    text-decoration: underline; 
+    color:#7F2E1A;
+    margin-left: 40%;
+    padding: 20% 0% 0% 0%;
+}
+
+
+.telalogin{
+    position: center;
+    width: 100%;
+    margin: center;
+    height: 70%;
+}

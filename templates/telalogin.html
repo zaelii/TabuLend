@@ -20,17 +20,29 @@
     
     <body>
     
-        <img src="/static/imagens/LOGO.png" alt="logo" Class="LogoLogin">
+    <div class ='telalogin'>
 
-        <form action="/login" method="post"></form>
-        
+        <form class="form" action="/login" method="post">
+
+            <img src="/static/imagens/LOGO.png" alt="logo" Class="LogoLogin">
+
+            <p class="textoUSUARIO"> USUÁRIO </p>
             <input class="BarraLoginTXT" type="text" name="username"  required>
+
+            <P class="textoSENHA"> SENHA </P>
             <input class="BarraLoginPASS" type="password" name="password" required>
+
             <button class="botãoEntrar" type="submit"> ENTRAR </button>
+            
         </form>
 
+    </div>
 
-    
+        <p> <br> </p>
+        <a class="RecuperarSenha" href="recuperarsenha.html" type="button" > Recuperar Senha </a>
+        <p>  </p>
+        <a class="Voltar" href="telainicial.html" type="button" > Voltar </a>
+
         <footer>
     
         </footer>

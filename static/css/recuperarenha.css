@@ -1,0 +1,18 @@
+
+body {
+    margin: 0;
+    background-color: #FFE59A;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogoLogin{
+    width: 250px;
+    height: auto; 
+    position: center;
+    left: auto; 
+    margin-top: 30%;
+}
+

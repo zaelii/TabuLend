@@ -1,19 +1,35 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect , request
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'NLETESTE'
 
-# Dados fictícios para os jogos
-jogos = [
-    {'nome': 'Catan', 'editora': 'Devir', 'preco': 'R$ 25,00', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\catan.jpg'},
-    {'nome': 'Jenga', 'editora': 'Hasbro', 'preco': 'R$ 30,00', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\jenga.jpg'},
-    {'nome': 'Zombicide', 'editora': 'Galapagos', 'preco': 'R$ 20,00', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\zombicide.jpg'},
-    {'nome': 'War', 'editora': 'Grow', 'preco': 'R$ 35,00', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\war.jpg'},
-    {'nome': 'Dixit', 'editora': 'Devir', 'preco': 'R$ 25,00', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\dixit.jpg'}
-]
 
 @app.route('/')
-def index():
-    return render_template('index.html', jogos=jogos)
+def home():
+    return render_template('telalogin.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    nome = request.form.get('username')
+    senha = request.form.get('password')
+    print(nome)
+    print(senha)
+    return redirect('/')
+
+@app.route('/telainicial.html')
+def telainicial():
+    return render_template('telainicial.html')
+
+
+@app.route('/recuperarsenha.html')
+def recuperarsenha():
+    return render_template('recuperarsenha.html')
+
+
+@app.route('/telalogin.html')
+def voltartelainicial():
+    return render_template('telalogin.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
