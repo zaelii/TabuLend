@@ -5,6 +5,8 @@ from menu import *
 from facades import *
 from decorator_jogo import JogoComDesconto  # Importa o decorator
 from strategy_preco import *  # Importa as estratégias de preço
+from chain_responsibility import *  # Importa a cadeia de responsabilidade
+from solicitacao import *  # Importa a solicitação de aluguel
 
 if __name__ == "__main__":
   
@@ -72,3 +74,16 @@ if __name__ == "__main__":
     sistema_aluguel.set_estrategia(PrecoPromocional())
     preco_promocional = sistema_aluguel.calcular_preco(10, 10)
     print(f"Preço promocional por 10 dias: R$ {preco_promocional}")
+
+    # Criando a cadeia de responsabilidade (CHAIN OF RESPONSIBILITY)
+    cadeia = CadeiaResponsabilidade()
+
+    # Criando uma solicitação de aluguel
+    solicitacao = SolicitacaoAluguel(cliente=usuario_eduarda, jogo=jogo_coup, preco=100)
+
+    # Processando a solicitação de aluguel pela cadeia de responsabilidade
+    cadeia = CadeiaResponsabilidade()
+    if cadeia.processar(solicitacao):
+        print("Solicitação de aluguel aprovada!")
+    else:
+        print("Solicitação de aluguel recusada.")
