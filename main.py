@@ -4,6 +4,7 @@ from usuario import *
 from menu import *
 from facades import *
 from decorator_jogo import JogoComDesconto  # Importa o decorator
+from strategy_preco import *  # Importa as estratégias de preço
 
 if __name__ == "__main__":
   
@@ -54,3 +55,20 @@ if __name__ == "__main__":
     jogo_baralho.exibir_detalhes()
     jogo_xadrez.exibir_detalhes()
     jogo_damas.exibir_detalhes()
+
+    # Exemplo de uso:
+    sistema_aluguel = SistemaAluguel(PrecoNormal())
+
+    # Cliente comum
+    preco = sistema_aluguel.calcular_preco(5, 10)  # Chame o método calcular_preco
+    print(f"Preço normal por 5 dias: R$ {preco}")
+
+    # Cliente VIP
+    sistema_aluguel.set_estrategia(PrecoVip())
+    preco_vip = sistema_aluguel.calcular_preco(5, 10)
+    print(f"Preço VIP por 5 dias: R$ {preco_vip}")
+
+    # Promoção para longos períodos
+    sistema_aluguel.set_estrategia(PrecoPromocional())
+    preco_promocional = sistema_aluguel.calcular_preco(10, 10)
+    print(f"Preço promocional por 10 dias: R$ {preco_promocional}")
