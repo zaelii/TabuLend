@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #FFE59A;
+}
+.LogoLogin{
+    width: 200px;
+
+}
+
+P{
+    font-family:'Alata';
+    text-align: center; 
+    background-color:  #FB5A48;
+    text-align: center; 
+    color:#ffffff;
+    border: 10px solid #FB5A48;
+    padding: center;
+    position: absolute;
+    top: 50%;
+    left: 43%; 
+}
+
+.Voltartelalogin{
+    font-family: 'Alata';
+    text-decoration: underline; 
+    color:#7F2E1A;
+    position: absolute;
+    top: 70%;
+    left: 48%; 
+}
+
+
+.telarecuperar{
+    width: 100%;
+    height: 100%; 
+    transform-origin: center; 
+}
+

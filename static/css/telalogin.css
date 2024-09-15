@@ -6,6 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .LogoLogin{
@@ -15,8 +16,8 @@ body {
 .botãoEntrar{
     font-family: 'Alata';
     position: absolute;
-    top: 75%;
-    left: 46.56%; 
+    top: 97%;
+    left: 25%; 
     background-color: #FB5A48;
     color: #fff;
     border: none;
@@ -25,10 +26,10 @@ body {
     font-size: 100%;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    font-family: 'Alata';
+    transform-origin: center; 
 }
 
-.botãoEntrar:hover, {
+.botãoEntrar:hover {
     background-color: #7f2e1a;
     transform: scale(1.05);
 }
@@ -66,7 +67,6 @@ body {
     color:#7F2E1A;
     border-bottom: 40%;
     margin-left: 20%;
-    padding: 20% 0% 0% 0%;
 }
 
 .Voltar{   
@@ -74,7 +74,6 @@ body {
     text-decoration: underline; 
     color:#7F2E1A;
     margin-left: 40%;
-    padding: 20% 0% 0% 0%;
 }
 
 
@@ -83,4 +82,5 @@ body {
     width: 100%;
     margin: center;
     height: 70%;
-}
+    transform: scale(1);
+    transform-origin: center; 

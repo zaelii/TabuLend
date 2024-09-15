@@ -35,6 +35,6 @@ def voltartelainicial():
 def telacadastrar():
     return render_template('telacadastrar.html')
 
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
