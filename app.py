@@ -16,6 +16,21 @@ def login():
     print(senha)
     return redirect('/')
 
+@app.route('/register', methods=['POST'])
+def register():
+    nome = request.form.get('name')
+    email = request.form.get('email')
+    usuario = request.form.get('username')
+    senha = request.form.get('password')
+
+    print(nome)
+    print(email)
+    print(usuario)
+    print(senha)
+    return redirect('/')
+
+
+
 @app.route('/telainicial.html')
 def telainicial():
     return render_template('telainicial.html')
