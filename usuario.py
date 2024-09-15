@@ -12,8 +12,8 @@ class usuario:
             self.enviarEmail(jogo)
 
     def enviarEmail(self,jogo):
-        remetente = "nyedson.lorran@academico.ifpb.edu.br"  #zaelli criar email para o tabuland...
-        senha= "mrsp uzrk erwg svhm"
+        remetente = "tabulendoficial@gmail.com" 
+        senha= "swnnbmozxervxqcs"
         assunto= f"jogo {jogo.titulo} disponível!!"
         #linkSite = "https://github.com/zaelii/TabuLend"
 

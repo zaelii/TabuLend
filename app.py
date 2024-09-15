@@ -1,4 +1,4 @@
-from flask import Flask, render_template,redirect , request
+from flask import Flask, render_template,redirect , request, flash
 
 import os
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def login():
     if Proxy.verificarLogin(nome,senha):
         return render_template('catalogo.html')
     else: 
-        print('USUARIO OU SENHA INVALIDOS!')
+        flash('USUARIO OU SENHA INVALIDO!')
         return redirect('/') 
 
 
@@ -53,7 +53,7 @@ def register():
     with open(DadosLogin, 'a') as f:
         f.write(f'Nome: {nome}, Email: {email}, Usuario: {usuario} Senha: {senha}\n')
 
-    return render_template('catalogo.html')
+    return render_template('telainicial.html')
 
 
 

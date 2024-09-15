@@ -34,6 +34,7 @@ body {
 
 .botãoCadastrar{
     font-family: 'Alata';
+    text-align: center;
     display: block;
     position: absolute;
     top: 55%; 
@@ -65,4 +66,5 @@ body {
     width: 100%;
     margin: center;
     height: 70%;
+    text-align: center;
 }
