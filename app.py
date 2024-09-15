@@ -1,6 +1,5 @@
-from flask import Flask, render_template,redirect , request
+from flask import Flask, render_template,redirect , request, render_template
 import os
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'NLETESTE'
 
@@ -16,7 +15,7 @@ def login():
     senha = request.form.get('password')
     print(nome)
     print(senha)
-    return redirect('/')
+    return render_template('catalogo.html')
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -35,6 +34,7 @@ if __name__ == '__main__':
         with open(DadosLogin, 'w') as f:
             f.write("Cadastro de Usuários:\n")
     app.run(debug=True)
+
 
 
 @app.route('/telainicial.html')

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Alata';
     margin: 0;
     padding: 0;
 
@@ -12,7 +12,7 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('/static/imagens/banner-jogos-biblioteca.jpg');
+    background-image: url('/static/imagens/estante02.jpeg');
     background-repeat: no-repeat;
     background-size: 100%; 
     filter: blur(2px);
@@ -20,13 +20,22 @@ body::before {
 }
 
 header {
-    background-color: #FDC603;
+    background-color: #FB5A48;
     color: white;
     padding: 10px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.LogoLogin{
+    width: 50px;
+    align-items: center;
+
+}
+
+.Logofront{
+    width: 150px;
 }
 
 .logo {
@@ -51,16 +60,19 @@ nav ul li a {
 
 
 .bem_vindo h1 {
+    font-family: 'Alata';
+
     font-size: 2.5em;
     margin-bottom: 10px;
     text-shadow: -1px 0 rgb(0, 0, 0);
 }
 
 .bem_vindo {
+    font-family: 'Alata';
     background: url('background.jpg') no-repeat center center/cover;
     height: 400px;
     text-align: center;
-    color: #3A2782;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,6 +80,7 @@ nav ul li a {
 }
 
 .bem_vindo input {
+    font-family: 'Alata';
     padding: 15px;
     width: 50%;
     border: 2px solid #ddd;
@@ -79,17 +92,9 @@ nav ul li a {
 
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 .bem_vindo input {
+    font-family: 'Alata';
     padding: 15px;
     width: 50%;
     border: 2px solid #ddd;
@@ -101,6 +106,7 @@ footer {
 }
 
 .bem_vindo input:focus {
+    font-family: 'Alata';
     border-color: #E43516;
     outline: none;
     box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
@@ -108,7 +114,7 @@ footer {
 
 .catalogo {
     padding: 50px;
-    background-color: #fff;
+    background-color: #FFE59A;
     text-align: center;
 }
 
