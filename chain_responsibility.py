@@ -1,4 +1,3 @@
-# chain_responsibility.py
 from abc import ABC, abstractmethod
 
 # Interface do Handler
@@ -46,7 +45,6 @@ class CadeiaResponsabilidade:
 
         # Conectando a cadeia
         self.disponibilidade.set_proximo(self.vip)
-        self.vip.set_proximo(self.saldo)
 
     def processar(self, solicitacao):
         return self.disponibilidade.handle(solicitacao)
