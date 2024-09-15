@@ -79,7 +79,8 @@ if __name__ == "__main__":
     cadeia = CadeiaResponsabilidade()
 
     # Criando uma solicitação de aluguel
-    solicitacao = SolicitacaoAluguel(cliente=usuario_eduarda, jogo=jogo_coup, preco=100)
+    solicitacao = SolicitacaoAluguel(cliente=usuario_eduarda, jogo=jogo_coup, codigo="SOL-1234")
+    
 
     # Processando a solicitação de aluguel pela cadeia de responsabilidade
     cadeia = CadeiaResponsabilidade()
