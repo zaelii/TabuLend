@@ -1,8 +1,10 @@
 from flask import Flask, render_template,redirect , request
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'NLETESTE'
 
+DadosLogin = 'DadosLogin.txt'
 
 @app.route('/')
 def home():
@@ -23,12 +25,16 @@ def register():
     usuario = request.form.get('username')
     senha = request.form.get('password')
 
-    print(nome)
-    print(email)
-    print(usuario)
-    print(senha)
-    return redirect('/')
+    with open(DadosLogin, 'a') as f:
+        f.write(f'Nome: {nome}, Email: {email}, Usuario: {usuario} Senha: {senha}\n')
 
+    return render_template('catalogo.html')
+
+if __name__ == '__main__':
+    if not os.path.exists(DadosLogin):
+        with open(DadosLogin, 'w') as f:
+            f.write("Cadastro de Usuários:\n")
+    app.run(debug=True)
 
 
 @app.route('/telainicial.html')
