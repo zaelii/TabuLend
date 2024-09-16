@@ -21,14 +21,14 @@
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="telalogin.html">Login</a></li>
+                <li><a href="telalogin.html">Sair</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="bem_vindo">
         <h1>Bem-vindo ao TabuLend</h1>
-        <p>Descubra seu próximo jogo de tabuleiro!</p>
+        <p>Descubra seu próximo jogo de tabuleiro {{username}}</p>
         <input type="text" placeholder="Pesquise por título">
     </section>
 
@@ -43,9 +43,18 @@
                 <p>Editora: {{ jogo.editora }}</p>
                 <p>Preço: {{ jogo.preco }}</p>
                 <p>Dias de Aluguel: {{ jogo.dias_aluguel }}</p>
-                <button>Alugar</button>
+                <p>Status: {{jogo.status}} </p>
+                {% if jogo.status == 'alugado' %}
+                    <div >
+                        <button class="BotãoNotificar"> Notificar </button>
+                    </div>
+                {% else %}
+                    <button>Alugar</button>
+                {% endif %}
             </div>
+
             {% endfor %}
+            
         </div>
     </section>
 

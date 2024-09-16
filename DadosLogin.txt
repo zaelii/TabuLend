@@ -2,3 +2,4 @@
 Nome: Nyedson Lorran, Email: nyedson.lorran@academico.ifpb.edu.br, Usuario: nyedsonlorran Senha: 12345
 Nome: ruan, Email: serazinruan@academico.ifpb.edu.br, Usuario: ruan Senha: 1234
 
+Nome: ruan, Email: serazinruan@academico.ifpb.edu.br, Usuario: ruancomr Senha: 1234

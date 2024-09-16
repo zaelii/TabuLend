@@ -1,4 +1,4 @@
-from flask import Flask, render_template,redirect , request, flash
+from flask import Flask, render_template,redirect , request, flash, session 
 
 import os
 app = Flask(__name__)
@@ -37,10 +37,20 @@ def login():
     Proxy = loginProxy(DadosLogin)  #cria uma instancia do proxy para verificar o login
 
     if Proxy.verificarLogin(nome,senha):
-        return render_template('catalogo.html')
+        session['username'] = nome  #armazenar o nome do usuario logado
+        return redirect('/usuariologado')
     else: 
         flash('USUARIO OU SENHA INVALIDO!')
         return redirect('/') 
+
+
+@app.route('/usuariologado')
+def Usuariologado():
+    username = session.get('username') 
+    if username:
+        return render_template('catalogo.html', username=username, jogos=jogos)  
+    else:
+        return redirect('/')
 
 
 @app.route('/register', methods=['POST'])
@@ -50,12 +60,13 @@ def register():
     usuario = request.form.get('username')
     senha = request.form.get('password')
 
-    with open(DadosLogin, 'a') as f:
-        f.write(f'Nome: {nome}, Email: {email}, Usuario: {usuario} Senha: {senha}\n')
+    novoUsuario = usuario(nome,email,usuario,senha)
+
+    novoUsuario.salvar()
 
     return render_template('telainicial.html')
 
-
+@app.route('/notificar')
 
 @app.route('/telainicial.html')
 def telainicial():
@@ -75,6 +86,17 @@ def voltartelainicial():
 @app.route('/telacadastrar.html')
 def telacadastrar():
     return render_template('telacadastrar.html')
+
+# Dados fictícios para os jogos
+
+jogos = [
+    {'nome': 'Catan', 'editora': 'Devir', 'preco': 'R$ 25,00', 'status': 'alugado', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\catan.jpg'},
+    {'nome': 'Jenga', 'editora': 'Hasbro', 'preco': 'R$ 30,00', 'status': 'disponivel', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\jenga.jpg'},
+    {'nome': 'Zombicide', 'editora': 'Galapagos', 'preco': '20,00', 'status': 'disponivel', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\zombicide.jpg'},
+    {'nome': 'War', 'editora': 'Grow', 'preco': 'R$ 35,00', 'status': 'alugado', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\war.jpg'},
+    {'nome': 'Dixit', 'editora': 'Devir', 'preco': 'R$ 25,00', 'status': 'disponivel', 'dias_aluguel': '7 dias', 'imagem': 'static\imagens\jogos\dixit.jpg'},
+]
+
 
 
 if __name__ == '__main__':
