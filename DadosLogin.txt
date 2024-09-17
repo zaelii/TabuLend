@@ -5,3 +5,5 @@ Nome: maria eduarda, Email: dudadazo@gmail.com, Usuario: duda, Senha: 1234, admi
 Nome: lilian, Email: liliandaon@gomail.com, Usuario: lilian, Senha: 2222, admin: False
 Nome: rodolfo , Email: rocha.rodolfo@gmail.com, Usuario: rodolfinho, Senha: 1111
 Nome: NL, Email: nyedsonlorranoficial@gmail.com, Usuario: nl, Senha: 4444
+Nome: admin, Email: admin@gmail.com, Usuario: admin, Senha: 1234, admin: True
+Nome: User, Email: user@gmail.com, Usuario: user, Senha: 1234, admin: False

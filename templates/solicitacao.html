@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Aluguel</title>
+    <link rel="stylesheet" href="/static/css/solicitacao.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TabuLend</div>
+    </header>
+
+    <section class="form-solicitacao">
+        <h1>Solicitação de Aluguel do Jogo: {{ jogo.titulo }}</h1>
+        <p>Valor: R$ {{ jogo.preco }}</p>
+
+        <form action="/solicitacao" method="post">
+            <input type="hidden" name="jogo_id" value="{{ jogo.id }}">
+            
+            <label for="endereco">Endereço de Entrega:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="pagamento">Forma de Pagamento: PIX</label>
+            <p>Entre em contato pelo WhatsApp e envie o comprovante: <a href="https://wa.me/seu-numero" target="_blank">Clique aqui para enviar</a></p>
+
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>TabuLend © 2024</p>
+    </footer>
+</body>
+</html>
