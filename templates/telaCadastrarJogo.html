@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/imagens/iconlogo.ico" type="image/x-icon"> 
+
+    <title>TabuLend
+    </title>
+    <link rel="stylesheet" href="/static/css/telacadastrar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/telaCadastrarJogo.css">
+
+</head>
+
+<body>
+
+<div class="telacadastro">
+
+    <form action="/registerJogo" method="post">
+
+        <img src="/static/imagens/LOGO.png" alt="logo" Class="LogoLogin">
+
+        <p class="textTITULO"> Título </p>
+        <input class="BarraLoginTITULO" type="text"  name="titulo" required>
+
+        <P class="textoEDITORA"> Editora </P>
+        <input class="BarraLoginEDITORA" type="text" name="editora" required>
+    
+        <P class="textoVALOR"> Valor </P>
+        <input class="BarraLoginVALOR" type="number" name="valor" required>
+
+        <P for="imagem">Imagem: </P>
+        <input class="BarraLoginIMAGEM" type="file"  name="imagem" accept="image/*" required>
+
+        <p class="textoSTATUS"> Status </p>
+        <select class="barraSTATUS" name="status">
+            <option class="texto" value="disponivel">Disponível</option>
+            <option class="texto" value="alugado">Alugado</option>
+        </select>
+
+        <button class="CadastrarJogo" type="submit"> CADASTRAR JOGO </button>
+
+    </form>
+
+</div>
+
+    
+    <footer>
+
+    </footer>
+
+</body>
+</html>

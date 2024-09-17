@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/imagens/iconlogo.ico" type="image/x-icon"> 
+
+    <title> ADMIN </title>
+
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/telaadmin.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo"> TabuLend  </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="bem_vindo">
+        <h1>Bem-vindo ao TabuLend</h1>
+        <p> O que vamos fazer hoje {{username}}? </p>
+        <div>
+            <br> </br>
+            <a href="/adicionarJogo" class="tablinks" > ADICIONAR JOGO </a>
+            <a class="tablinks" > VER SOLICITAÇÕES </a>
+            <a href="/editarJogos" class="tablinks"> EDITAR ACERVO </a>
+            <a class="tablinks" > ANALISAR PAGAMENTOS </a>
+        </div>
+    
+    </section>
+
+    <footer class="barra">
+    
+    </footer>
+</body>
+</html>

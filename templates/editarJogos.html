@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/catalogo.css">
+    <link rel="stylesheet" href="/static/css/editarJogos.css">
 </head>
 <body>
     
@@ -45,9 +45,9 @@
                 <p>Valor: {{ jogo.preco }}</p>
                 <p>Status: {{jogo.status}} </p>
                 {% if jogo.status == 'alugado' %}
-                    <div >
-                        <button class="BotãoNotificar"> Notificar </button>
-                    </div>
+                <form action="{{ url_for('notificar', titulo=jogo.titulo) }}" method="post">
+                    <button type="submit">Notificar</button>
+                </form>
                 {% else %}
                     <button>Alugar</button>
                 {% endif %}

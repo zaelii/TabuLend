@@ -1,0 +1,5 @@
+titulo: catan, editora: Devir, Valor: 30, status: disponivel
+titulo: dixit, editora: Devir, Valor: 30, status: disponivel
+titulo: war, editora: Grow, Valor: 40, status: alugado
+titulo: Zombicide, editora: Galapagos, Valor: 35, status: disponivel
+titulo: jenga, editora: Galapagos, Valor: 20, status: disponivel

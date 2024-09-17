@@ -1,0 +1,124 @@
+body {
+    font-family: 'Alata';
+    margin: 0;
+    padding: 0;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/static/imagens/estante02.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    filter: blur(2px);
+    z-index: -1; 
+}
+
+header {
+    background-color: #FB5A48;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoLogin{
+    width: 50px;
+    align-items: center;
+
+}
+
+.Logofront{
+    width: 150px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.bem_vindo h1 {
+    font-family: 'Alata';
+
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: -1px 0 rgb(0, 0, 0);
+}
+
+.bem_vindo {
+    font-family: 'Alata';
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 400px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.bem_vindo input:focus {
+    font-family: 'Alata';
+    border-color: #E43516;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2);
+}
+
+
+.barra {
+    font-family: 'Alata';
+    padding: 100px ;
+    background-color: #FFE59A;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.tablinks{
+    text-decoration: none;
+    font-family:'Alata';
+    text-align: center; 
+    background-color:  #FB5A48;
+    text-align: center; 
+    color:#ffffff;
+    border: none;
+    border-color: #FB5A48;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 100%;
+
+
+}
+
+.tablinks:hover {
+    background-color: #7f2e1a;
+    transform: scale(1.05);
+}
