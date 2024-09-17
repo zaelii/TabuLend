@@ -1,5 +1,5 @@
-titulo: catan, editora: Devir, Valor: 30, status: disponivel
-titulo: dixit, editora: Devir, Valor: 30, status: disponivel
-titulo: war, editora: Grow, Valor: 40, status: alugado
-titulo: Zombicide, editora: Galapagos, Valor: 35, status: disponivel
-titulo: jenga, editora: Galapagos, Valor: 20, status: disponivel
+titulo: war, editora: Grow, preco: 40, status: disponivel, imagem: static/imagens/jogos\war.jpg
+titulo: war, editora: Grow, preco: 33, status: disponivel, imagem: static/imagens/jogos\war.jpg
+titulo: catan, editora: naosei, preco: 22, status: disponivel, imagem: static/imagens/jogos\catan.jpg
+titulo: dixit, editora: seilaaaa, preco: 20, status: alugado, imagem: static/imagens/jogos\dixit.jpg
+titulo: Zombicide, editora: zaaaaaa, preco: 50, status: alugado, imagem: static/imagens/jogos\zombicide.jpg

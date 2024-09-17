@@ -4,13 +4,10 @@ body, html {
     height: 100%;
     display: center;
     justify-content: center; 
-    align-items: center;
+    align-items: inline;
     background-color: #FFE59A;
 }
 
-.LogoLogin{
-    width: 200px;
-}
 
 
 .BarraLoginTITULO, .BarraLoginEDITORA, .BarraLoginVALOR,.barraSTATUS{
@@ -30,7 +27,7 @@ body, html {
 
 }
 
-.textTITULO,.textoEDITORA,.textoVALOR,.textoSTATUS, .textoSTATUS, .textoiMAGEM{
+.textTITULO,.textoEDITORA,.textoVALOR,.textoSTATUS, .textoSTATUS,.textoIMAGEM{
     font-family:'Alata';
     text-align: center; 
     background-color:  #FB5A48;
@@ -48,7 +45,7 @@ body, html {
     width: 25%;
 }
 
-.textoEDITORA{
+.textoEDITORA, .textoIMAGEM{
     width: 28%;
 
 }
@@ -63,9 +60,9 @@ body, html {
 
 .CadastrarJogo{
     font-family: 'Alata';
-    position: absolute;
-    top: 100%;
-    left: 5%; 
+    position: fixed;
+    top: 90%;
+    left: 20%; 
     background-color: #FB5A48;
     color: #fff;
     border: none;
