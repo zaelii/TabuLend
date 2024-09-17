@@ -1,14 +1,23 @@
-from flask import Flask, render_template, redirect, request, flash, session
-from jogo import Jogo
+from flask import Flask, render_template, redirect, request, flash, session, url_for
+from werkzeug.utils import secure_filename
+from jogo import *
 from usuario import *
 import os
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'NLETESTE'
-
-# Dados dos jogos e login
+# Dados dos jogos,login e imagens
 jogos_path = 'catalogoJogos.txt'
 dados_login_path = 'DadosLogin.txt'
+imagens_jogos_path = 'static/imagens/jogos'
+
+extensions = {'png', 'jpg', 'jpeg', 'gif'}
+
+def extensaovalida(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in extensions
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'NLETESTE'
+app.config['UPLOAD_FOLDER'] = imagens_jogos_path
+
 
 @app.route('/')
 def home():
@@ -42,7 +51,7 @@ def adicionarjogo():
 def Adminlogado():
     username = session.get('username')
     if username:
-        jogos = Jogo.catalogoJogos()
+        jogos = JogoDeTabuleiro.catalogoJogos()
         return render_template('telaadmin.html', username=username, jogos=jogos)
     else:
         return redirect('/')
@@ -51,7 +60,7 @@ def Adminlogado():
 def Usuariologado():
     username = session.get('username')
     if username:
-        jogos = Jogo.catalogoJogos()
+        jogos = JogoDeTabuleiro.catalogoJogos()
         return render_template('catalogo.html', username=username, jogos=jogos)
     else:
         return redirect('/')
@@ -74,11 +83,22 @@ def registerJogo():
     editora = request.form.get('editora')
     preco = request.form.get('valor')
     status = request.form.get('status')
+    
+    imagem = request.files['imagem']
 
-    novoJogo = Jogo(titulo, editora, preco, status)
-    novoJogo.salvarJogo()
+    if imagem and extensaovalida(imagem.filename):
+        filename = secure_filename(imagem.filename)
+        imagem.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        
+        caminho_imagem = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        novoJogo = JogoDeTabuleiro(titulo, editora, preco, status, caminho_imagem)
+        novoJogo.salvarJogo()
 
-    return redirect('/Adminlogado')
+        return redirect('/Adminlogado')
+
+    flash('Tipo de arquivo de imagem não permitido.')
+    return redirect(request.url)
+    
 
 @app.route('/logout')
 def logout():

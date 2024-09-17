@@ -60,7 +60,7 @@ class loginProxy:
         self.DadosLogin = DadosLogin
 
     def verificarLogin(self,username,password):
-        if not os.path.exists(self.DadosLogin):     #verifica se o arquivo dado existe 
+        if not os.path.exists(self.DadosLogin): #verifica se o arquivo dado existe 
             return False, None
         
 

@@ -39,7 +39,7 @@
         <div class="jogos-grid">
             {% for jogo in jogos %}
             <div class="jogo-card">
-                <img src="{{ jogo.imagem }}" alt="Capa do {{ jogo.nome }}">
+                <img src="{{ jogo.imagem }}" alt="{{ jogo.titulo }}" width="200px">
                 <h3>{{ jogo.titulo }}</h3>
                 <p>Editora: {{ jogo.editora }}</p>
                 <p>Valor: {{ jogo.preco }}</p>
