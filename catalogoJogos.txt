@@ -1,5 +1,20 @@
-titulo: war, editora: Grow, preco: 40, status: disponivel, imagem: static/imagens/jogos\war.jpg
-titulo: war, editora: Grow, preco: 33, status: disponivel, imagem: static/imagens/jogos\war.jpg
-titulo: catan, editora: naosei, preco: 22, status: disponivel, imagem: static/imagens/jogos\catan.jpg
-titulo: dixit, editora: seilaaaa, preco: 20, status: alugado, imagem: static/imagens/jogos\dixit.jpg
-titulo: Zombicide, editora: zaaaaaa, preco: 50, status: alugado, imagem: static/imagens/jogos\zombicide.jpg
+titulo: catan, editora: Devir, preco: 30, status: disponivel, imagem: static/imagens/jogos\15.png, observadores: 
+titulo: coup, editora: matel, preco: 20, status: disponivel, imagem: static/imagens/jogos\9.png, observadores: 
+titulo: dixit, editora: Devir, preco: 25, status: disponivel, imagem: static/imagens/jogos\14.png, observadores: 
+titulo: azul, editora: Devir, preco: 25, status: disponivel, imagem: static/imagens/jogos\4.png, observadores: 
+titulo: bang, editora: Grow, preco: 20, status: disponivel, imagem: static/imagens/jogos\1.png, observadores: 
+titulo: bandido, editora: mabel, preco: 20, status: disponivel, imagem: static/imagens/jogos\2.png, observadores: 
+titulo: ticket to ride, editora: Devir, preco: 30, status: disponivel, imagem: static/imagens/jogos\5.png, observadores: 
+titulo: carcassone, editora: Grow, preco: 30, status: disponivel, imagem: static/imagens/jogos\6.png, observadores: 
+titulo: high society, editora: Devir, preco: 15, status: disponivel, imagem: static/imagens/jogos\8.png, observadores: 
+titulo: harmonies, editora: mabel, preco: 20, status: disponivel, imagem: static/imagens/jogos\10.png, observadores: 
+titulo: everdell, editora: Grow, preco: 25, status: disponivel, imagem: static/imagens/jogos\13.png, observadores: 
+titulo: exploing kittens, editora: mabel, preco: 25, status: disponivel, imagem: static/imagens/jogos\17.png, observadores: 
+titulo: nhac nhac, editora: mabel, preco: 15, status: disponivel, imagem: static/imagens/jogos\18.png, observadores: 
+titulo: banco imobiliário , editora: mabel, preco: 25, status: disponivel, imagem: static/imagens/jogos\19.png, observadores: 
+titulo: the resistance , editora: Grow, preco: 20, status: disponivel, imagem: static/imagens/jogos\20.png, observadores: 
+titulo: jenga, editora: Devir, preco: 15, status: disponivel, imagem: static/imagens/jogos\3.png, observadores: 
+titulo: zombicide, editora: Grow, preco: 35, status: alugado, imagem: static/imagens/jogos\12.png, observadores: 
+titulo: dixit, editora: Devir, preco: 20, status: disponivel, imagem: static/imagens/jogos\14.png, observadores: 
+titulo: ticket to ride, editora: Devir, preco: 25, status: disponivel, imagem: static/imagens/jogos\5.png, observadores: 
+titulo: war, editora: Grow, preco: 25, status: disponivel, imagem: static/imagens/jogos\16.png, observadores: 

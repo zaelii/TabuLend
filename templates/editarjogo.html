@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Editar Jogo </title>
+    
+    <link rel="shortcut icon" href="/static/imagens/iconlogo.ico" type="image/x-icon"> 
+
+    <link rel="stylesheet" href="/static/css/telacadastrar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/telaCadastrarJogo.css">
+
+</head>
+
+<body>
+
+<div> 
+    
+    <form action="{{ url_for('editarJogo', titulo=jogo.titulo) }}" method="POST" enctype="multipart/form-data">
+
+        <p class="textTITULO" for="titulo">Título:</p>
+        <input class="BarraLoginTITULO" type="text" id="titulo" name="titulo" value="{{ jogo.titulo }}" required><br>
+
+        <p class="textoEDITORA" for="editora">Editora:</p>
+        <input class="BarraLoginEDITORA" type="text" id="editora" name="editora" value="{{ jogo.editora }}" required><br>
+
+        <p  class="textoVALOR" for="valor">Valor:</p>
+        <input class="BarraLoginVALOR" type="number" id="valor" name="valor" value="{{ jogo.preco }}" required><br>
+
+        <p Class="textoIMAGEM" for="imagem">Imagem:</p>
+        <input type="file" id="imagem" name="imagem" accept="image/*"><br>
+        <input type="hidden" name="imagem_atual" value="{{ jogo.imagem }}">
+
+        <p class="textoSTATUS" for="status">Status:</p>
+        <select class="BarraLoginIMAGEM"  id="status" name="status" required>
+            <option value="disponivel" {% if jogo.status == 'disponivel' %}selected{% endif %}>Disponível</option>
+            <option value="alugado" {% if jogo.status == 'alugado' %}selected{% endif %}>Alugado</option>
+        </select><br>
+
+
+        <button class="AtuaizarJogo" type="submit">ATUALIZAR JOGO</button>
+    </form>
+
+</div>
+
+</body>
+</html>

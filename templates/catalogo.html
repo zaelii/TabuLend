@@ -30,7 +30,11 @@
     <section class="bem_vindo">
         <h1>Bem-vindo ao TabuLend</h1>
         <p>Descubra seu próximo jogo de tabuleiro {{username}}</p>
-        <input type="text" placeholder="Pesquise por título">
+        <form class="bem_vindo" method="GET" action="{{ url_for('pesquisarJogos') }}">
+            <input type="text" name="query" placeholder="Pesquise por título">
+            <p> </p>
+            <button class="botao" type="submit">Pesquisar</button>
+        </form>
     </section>
 
     <!-- Catálogo de Jogos -->
@@ -45,9 +49,9 @@
                 <p>Valor: {{ jogo.preco }}</p>
                 <p>Status: {{jogo.status}} </p>
                 {% if jogo.status == 'alugado' %}
-                    <div >
-                        <button class="BotãoNotificar"> Notificar </button>
-                    </div>
+                    <form action="/notificar/{{ jogo.titulo }}" method="POST">
+                        <button type="submit" class="BotãoNotificar"> Notificar </button>
+                    </form>
                 {% else %}
                     <button>Alugar</button>
                 {% endif %}

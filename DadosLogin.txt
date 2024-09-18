@@ -1,7 +1,11 @@
 
-Nome: Nyedson Lorran, Email: nyedson.lorran@academico.ifpb.edu.br, Usuario: nyedsonlorran Senha: 12345, admin: True
-Nome: ruan, Email: serazinruan@academico.ifpb.edu.br, Usuario: ruan Senha: 1234
+Nome: Nyedson Lorran, Email: nyedson.lorran@academico.ifpb.edu.br, Usuario: nyedsonlorran Senha: senhanyedson, admin: True
+Nome: ruan, Email: serazinruan@academico.ifpb.edu.br, Usuario: ruan Senha: senha@@
 Nome: maria eduarda, Email: dudadazo@gmail.com, Usuario: duda, Senha: 1234, admin: False
 Nome: lilian, Email: liliandaon@gomail.com, Usuario: lilian, Senha: 2222, admin: False
 Nome: rodolfo , Email: rocha.rodolfo@gmail.com, Usuario: rodolfinho, Senha: 1111
 Nome: NL, Email: nyedsonlorranoficial@gmail.com, Usuario: nl, Senha: 4444
+Nome: joao, Email: joao@gmail.com, Usuario: joao, Senha: joao0987654321
+Nome: jose, Email: jose@silva.com, Usuario: jose01, Senha: josejose123
+Nome: joao, Email: joao@silva.com, Usuario: joaosilva, Senha: joaojoao098
+Nome: pedro, Email: pedro@ilva.com, Usuario: pedro, Senha: pedropedro123

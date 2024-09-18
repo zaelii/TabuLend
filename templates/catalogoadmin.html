@@ -7,12 +7,11 @@
 
     <title>Catálogo de Aluguel de Jogos</title>
 
-    <link rel="stylesheet" href="/static/css/index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/editarJogos.css">
+    <link rel="stylesheet" href="/static/css/catalogoadmin.css">
 </head>
 <body>
     
@@ -29,28 +28,34 @@
 
     <section class="bem_vindo">
         <h1>Bem-vindo ao TabuLend</h1>
-        <p>Descubra seu próximo jogo de tabuleiro {{username}}</p>
-        <input type="text" placeholder="Pesquise por título">
+        <form  method="GET" action="{{ url_for('pesquisarJogosAdmin') }}">
+            <input type="text" name="query" placeholder="Pesquise por título">
+            <p> </p>
+            <button class="button" type="submit">Pesquisar</button>
+        </form>
     </section>
 
     <!-- Catálogo de Jogos -->
     <section id="catalogo" class="catalogo">
-        <h2>Nosso Acervo de Jogos</h2>
+        <h2>Meu Acervo de Jogos</h2>
         <div class="jogos-grid">
             {% for jogo in jogos %}
+
             <div class="jogo-card">
-                <img src="{{ jogo.imagem }}" alt="Capa do {{ jogo.nome }}">
+                <img src="{{ jogo.imagem }}" alt="{{ jogo.titulo }}" width="200px">
                 <h3>{{ jogo.titulo }}</h3>
                 <p>Editora: {{ jogo.editora }}</p>
                 <p>Valor: {{ jogo.preco }}</p>
                 <p>Status: {{jogo.status}} </p>
-                {% if jogo.status == 'alugado' %}
-                <form action="{{ url_for('notificar', titulo=jogo.titulo) }}" method="post">
-                    <button type="submit">Notificar</button>
+                
+                <form action="/editarJogo/{{ jogo.titulo }}" method="GET">
+                    <button class="button" type="submit">Editar</button>
                 </form>
-                {% else %}
-                    <button>Alugar</button>
-                {% endif %}
+
+                <form action="/excluir_jogo/{{ jogo.titulo }}" method="POST">
+                    <button class="button" type="submit" onclick="return confirm('Tem certeza que deseja excluir o jogo?');">Excluir</button>
+                </form>
+
             </div>
 
             {% endfor %}

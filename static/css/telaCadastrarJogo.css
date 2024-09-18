@@ -73,6 +73,21 @@ body, html {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+.AtuaizarJogo{
+    font-family: 'Alata';
+    position: fixed;
+    top: 90%;
+    left: 44%; 
+    background-color: #FB5A48;
+    color: #fff;
+    border: none;
+    border-radius: 3%;
+    padding: 10px 18px;
+    font-size: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
 .CadastrarJogo:hover {
     background-color: #7f2e1a;
     transform: scale(1.05);
