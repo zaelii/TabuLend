@@ -5,7 +5,12 @@ Nome: maria eduarda, Email: dudadazo@gmail.com, Usuario: duda, Senha: 1234, admi
 Nome: lilian, Email: liliandaon@gomail.com, Usuario: lilian, Senha: 2222, admin: False
 Nome: rodolfo , Email: rocha.rodolfo@gmail.com, Usuario: rodolfinho, Senha: 1111
 Nome: NL, Email: nyedsonlorranoficial@gmail.com, Usuario: nl, Senha: 4444
+<<<<<<< HEAD
 Nome: joao, Email: joao@gmail.com, Usuario: joao, Senha: joao0987654321
 Nome: jose, Email: jose@silva.com, Usuario: jose01, Senha: josejose123
 Nome: joao, Email: joao@silva.com, Usuario: joaosilva, Senha: joaojoao098
 Nome: pedro, Email: pedro@ilva.com, Usuario: pedro, Senha: pedropedro123
+=======
+Nome: admin, Email: admin@gmail.com, Usuario: admin, Senha: 1234, admin: True
+Nome: User, Email: user@gmail.com, Usuario: user, Senha: 1234, admin: False
+>>>>>>> 73a08967cd4fe97193b088891ee9e5863ac86b62
