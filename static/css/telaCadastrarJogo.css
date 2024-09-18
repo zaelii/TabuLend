@@ -10,7 +10,7 @@ body, html {
 
 
 
-.BarraLoginTITULO, .BarraLoginEDITORA, .BarraLoginVALOR,.barraSTATUS{
+.BarraLoginTITULO, .BarraLoginEDITORA, .BarraLoginVALOR, .BarraLoginIMAGEM{
     width: 100%;
     color: #7f2e1a;
     padding: 11px;

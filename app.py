@@ -47,6 +47,26 @@ def enviar_email_para_observadores(observador_email, jogo):
 def home():
     return render_template('telalogin.html')
 
+
+class loginProxy:
+    def __init__(self,DadosLogin):
+
+        self.DadosLogin = DadosLogin
+
+    def verificarLogin(self,username,password):
+        if not os.path.exists(self.DadosLogin): #verifica se o arquivo dado existe 
+            return False, None
+        
+
+        with open(self.DadosLogin, 'r') as f:
+            for linha in f:
+                if f'Usuario: {username}' in linha and f'Senha: {password}' in linha:
+                    if 'admin: True' in linha:
+                        return True, 'admin' 
+                    else:
+                        return True, 'user'
+        return False, None
+
 @app.route('/login', methods=['POST'])
 def login():
     nome = request.form.get('username')
@@ -66,6 +86,9 @@ def login():
     else:
         flash('USUARIO OU SENHA INVALIDO!')
         return redirect('/')
+    
+
+
     
 @app.route('/pesquisarJogos', methods=['GET'])
 def pesquisarJogos():
